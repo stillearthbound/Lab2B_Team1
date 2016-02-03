@@ -31,6 +31,18 @@ abstract public class Account {
          this.CreditCardNumber = CreditCard;
          this.pin = Pin;
      }
+     public void depositCheckings(double depositAmount){
+        this.CheckingBalance = this.CheckingBalance + depositAmount;
+    }
+     public void withdrawCheckings(double withdrawAmount){
+        this.CheckingBalance = this.CheckingBalance - withdrawAmount;
+    }
+     public void depositSavings(double depositAmount){
+        this.SavingsBalance = this.SavingsBalance + depositAmount;
+    }
+     public void withdrawSavings(double withdrawAmount){
+        this.SavingsBalance = this.SavingsBalance - withdrawAmount;
+    }
      
 public String getAccountNumber()
 {
