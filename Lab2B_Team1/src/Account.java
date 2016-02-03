@@ -48,8 +48,21 @@ public String getCheckingBalance()
 public String getBusinessAccountBalance(){
     return "Account Balance = " + this.BusinessAccountBalance;
 }
-public double convertEuroToDollars(double AccountBalance){
+
+public double convertBusinessEuroToDollars(double AccountBalance){
     this.BusinessAccountBalance = AccountBalance;
+    AccountBalance = Currency.convertEuroToDollar(AccountBalance);
+    return AccountBalance;
+}
+
+public double convertCheckingEuroToDollars(double AccountBalance){
+    this.CheckingBalance = AccountBalance;
+    AccountBalance = Currency.convertEuroToDollar(AccountBalance);
+    return AccountBalance;
+}
+
+public double convertSavingEuroToDollars(double AccountBalance){
+    this.SavingsBalance = AccountBalance;
     AccountBalance = Currency.convertEuroToDollar(AccountBalance);
     return AccountBalance;
 }
