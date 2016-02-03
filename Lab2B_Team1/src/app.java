@@ -25,7 +25,11 @@ public class app {
         int input1 =0; 
        
         
+
         System.out.println("Hello, Would you like to make a deposit or withdrawl?");
+
+        System.out.println("Hello, would you like to make a deposit or withdrawl or you can view your balance.  Press W for Withdraw or D for deposit and B to check Balance.");
+        
         input = userInput.nextLine();
         if (input.equalsIgnoreCase("W"))
         {
@@ -33,20 +37,22 @@ public class app {
             input1 = userInput.nextInt();
           
             a1.withdrawCheckings(input1);
+            System.out.println(a1.getCheckingBalance());
         }
         if (input.equalsIgnoreCase("D"))
         {
             System.out.println("Please enter an amount to deposit:");
             input1 = userInput.nextInt();
           
-            a1.DepositCheckings(input1);
+            a1.depositCheckings(input1);
+             System.out.println(a1.getCheckingBalance());
         }
-        
-        System.out.println(a1.getAccountNumber());
-        System.out.println(a1.getCheckingBalance()); 
-        
-        
-        
+         if (input.equalsIgnoreCase("B"))
+        {
+            System.out.println(a1.getCheckingBalance());
+            System.out.println(a1.getSavingsBalance());
+        }
+   
         
     }
     
