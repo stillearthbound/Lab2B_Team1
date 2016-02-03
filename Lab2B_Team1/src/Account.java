@@ -9,13 +9,13 @@
  * @author Suzanne
  */
 abstract public class Account {
-     public long AccountNumber;
-     public double SavingsBalance; 
-     public double CheckingBalance;
-     public long CreditCardNumber;
-     public int pin;
-     public long BusinessAccountNum;
-     public double BusinessAccountBalance;
+     private long AccountNumber;
+     private double SavingsBalance; 
+     private double CheckingBalance;
+     private long CreditCardNumber;
+     private int pin;
+     private long BusinessAccountNum;
+     private double BusinessAccountBalance;
      
      Account (long AccountNumber, double SavingsBalance, double CheckingBalance, long CreditCardNumber, int pin){
         this.AccountNumber=AccountNumber;
