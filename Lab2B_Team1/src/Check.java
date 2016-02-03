@@ -7,6 +7,9 @@
  *
  * @author Richa
  */
+
+// hello
+
 public class Check{
     private double checkAmount;
 
