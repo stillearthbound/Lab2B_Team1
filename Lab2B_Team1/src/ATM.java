@@ -30,5 +30,9 @@ public class ATM {
        return AccountBalance;
     
 }
+   public double convertEuroToDollars(double Amount){
+    Amount = Currency.convertEuroToDollar(Amount);
+    return Amount;
+}
    
 }

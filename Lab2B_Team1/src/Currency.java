@@ -8,8 +8,8 @@
  * @author Matthew
  */
 public class Currency {
-    public static double convertEuroToDollar(double AccountBalance){
-        double initial = AccountBalance;
+    public static double convertEuroToDollar(double Amount){
+        double initial = Amount;
         double dollars = initial*1.11;
         return dollars;
     }
