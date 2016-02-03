@@ -35,13 +35,23 @@ abstract public class Account {
         this.CheckingBalance = this.CheckingBalance + depositAmount;
     }
      public void withdrawCheckings(double withdrawAmount){
+         if (withdrawAmount< this.CheckingBalance){
         this.CheckingBalance = this.CheckingBalance - withdrawAmount;
+         }
+         else{
+             System.out.print("error Insufficient Checkings Balance");
+         }
     }
      public void depositSavings(double depositAmount){
         this.SavingsBalance = this.SavingsBalance + depositAmount;
     }
      public void withdrawSavings(double withdrawAmount){
+         if (withdrawAmount < this.SavingsBalance){
         this.SavingsBalance = this.SavingsBalance - withdrawAmount;
+         }
+         else{
+             System.out.print("error Insufficient Savings Balance");
+         }
     }
      
 public String getAccountNumber()
