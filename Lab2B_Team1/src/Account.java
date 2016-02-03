@@ -60,4 +60,8 @@ public String getCheckingBalance()
 public String getBusinessAccountBalance(){
     return "Account Balance = " + this.BusinessAccountBalance;
 }
+
+    void DepositCheckings(int input1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
