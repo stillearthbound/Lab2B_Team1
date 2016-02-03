@@ -18,8 +18,10 @@ public class app {
         Account a1 = new PersonalAccount(123456, 14.00, 15.00, 23454325, 1234, "Joe", "Shmoe");
         Account a2 = new BusinessAccount(123456, 15.00, 14.00, 1234535, 1245, "Something Inc.");
         
+        a1.depositCheckings(100);
+        System.out.println(a1.getAccountNumber());
+        System.out.println(a1.getCheckingBalance()); 
         
-        System.out.println(a2.getAccountNumber());
         
         
         
