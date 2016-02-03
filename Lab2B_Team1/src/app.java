@@ -25,18 +25,18 @@ public class app {
         int input1 =0; 
        
         
-        System.out.println("Hello, would you like to make a deposit or withdrawl");
+        System.out.println("Hello, Would you like to make a deposit or withdrawl?");
         input = userInput.nextLine();
         if (input.equalsIgnoreCase("W"))
         {
-            System.out.println("Please enter an amount");
+            System.out.println("Please enter an amount to withdraw:");
             input1 = userInput.nextInt();
           
             a1.withdrawCheckings(input1);
         }
         if (input.equalsIgnoreCase("D"))
         {
-            System.out.println("Please enter an amount");
+            System.out.println("Please enter an amount to deposit:");
             input1 = userInput.nextInt();
           
             a1.DepositCheckings(input1);
