@@ -48,4 +48,9 @@ public String getCheckingBalance()
 public String getBusinessAccountBalance(){
     return "Account Balance = " + this.BusinessAccountBalance;
 }
+public double convertEuroToDollars(double AccountBalance){
+    this.BusinessAccountBalance = AccountBalance;
+    AccountBalance = Currency.convertEuroToDollar(AccountBalance);
+    return AccountBalance;
+}
 }

@@ -8,5 +8,9 @@
  * @author Matthew
  */
 public class Currency {
-    
-}
+    public static double convertEuroToDollar(double AccountBalance){
+        double initial = AccountBalance;
+        double dollars = initial*1.11;
+        return dollars;
+    }
+    }
