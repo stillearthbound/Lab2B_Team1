@@ -8,9 +8,27 @@
  *
  * @author capta
  */
-public interface ATM {
-   double WithdrawMoney(double WithdrawAmount, long AccountNumber);
-   boolean CheckPin(int PinNumber, long CCNumber);
-   public double DepositMoney(double DepositAmount, long AccountNumber);
-   public boolean accountNumberCheck(long CCNumber, long AccountNumber);
+public class ATM {
+   
+   boolean CheckPin(int PinNumber, long CCNumber, int AccountPin, long AccountCC){
+    if (PinNumber == AccountPin && CCNumber == AccountCC){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+}
+
+    
+    public double WithdrawMoney(double WithdrawAmount, long AccountNumber, double AccountBalance){
+       AccountBalance= AccountBalance - WithdrawAmount;
+       return AccountBalance;
+   }
+   public double DepositMoney(double DepositAmount, long AccountNumber, double AccountBalance){
+       AccountBalance= AccountBalance + DepositAmount;
+       return AccountBalance;
+    
+}
+   
 }
