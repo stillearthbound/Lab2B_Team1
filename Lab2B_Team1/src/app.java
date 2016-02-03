@@ -15,6 +15,10 @@ public class app {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Account a1 = new PersonalAccount(123456, 14.00, 15.00, 23454325, 1234, "Joe", "Shmoe");
+        
+        
+        System.out.println(a1.getAccountNumber());
     }
     
 }

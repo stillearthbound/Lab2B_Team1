@@ -13,12 +13,22 @@ public class PersonalAccount extends Account{
     private String LastName;
     
     
-    PersonalAccount(long AccountNumber, String FirstName, String LastName){
-        super(AccountNumber);
+    PersonalAccount(long AccountNumber, double SavingsBalance, double CheckingBalance, long CreditCardNumber,int pin, String FirstName, String LastName){
+        super(AccountNumber, SavingsBalance, CheckingBalance, CreditCardNumber, pin);
         this.FirstName=FirstName;
         this.LastName=LastName;
         
         
     }
+    public String getAccountNumber()
+    {
+        return this.FirstName + " " + this.LastName + "'s Account Number is " + super.getAccountNumber(); 
+    }
+   public String getSavingsBalance(){
+   return super.getSavingsBalance();
+   }
+   public String getCheckingBalance() {
+       return super.getCheckingBalance();
+   }
     
 }

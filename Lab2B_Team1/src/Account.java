@@ -8,12 +8,30 @@
  *
  * @author Suzanne
  */
-public class Account {
+abstract public class Account {
      public long AccountNumber;
-     private double SavingsBalance; 
+     public double SavingsBalance; 
+     public double CheckingBalance;
+     public long CreditCardNumber;
+     public int pin; 
      
-     
-     Account (long AccountNumber){
-         
+     Account (long AccountNumber, double SavingsBalance, double CheckingBalance, long CreditCardNumber, int pin){
+        this.AccountNumber=AccountNumber;
+        this.SavingsBalance = SavingsBalance;
+        this.CheckingBalance = CheckingBalance;
+        this.CreditCardNumber = CreditCardNumber;
+        this.pin= pin;
      }
+public String getAccountNumber()
+{
+    return ""+  this.AccountNumber;
+}
+public String getSavingsBalance() 
+{    
+    return "Savings Balance = " + this.SavingsBalance; 
+}
+public String getCheckingBalance()
+{
+        return "Checking Balance =" + this.CheckingBalance;                         
+}
 }
