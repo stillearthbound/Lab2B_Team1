@@ -10,7 +10,7 @@
  */
 public interface ATM {
    public double WithdrawMoney(double WithdrawAmount);
-   int CheckPin(int PinNumber, long CCNumber);
+   boolean CheckPin(int PinNumber, long CCNumber);
    public double DepositMoney(double DepositAmount);
-   public long accountNumberCheck(long CCNumber, long AccountNumber);
+   public boolean accountNumberCheck(long CCNumber, long AccountNumber);
 }
