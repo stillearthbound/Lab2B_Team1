@@ -53,6 +53,11 @@ abstract public class Account {
              System.out.print("error Insufficient Savings Balance");
          }
     }
+    public void depositCheck(double checkAmount){
+        Check check = new Check (checkAmount);
+        double deposit = check.getCheckAmount();
+        this.CheckingBalance = this.CheckingBalance + deposit;
+    }
      
 public String getAccountNumber()
 {

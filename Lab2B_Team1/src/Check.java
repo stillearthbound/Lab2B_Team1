@@ -9,33 +9,15 @@
  */
 
 public class Check{
-    private long receivingAccountNumber;
-    private long sendingAccountNumber;
     private double checkAmount;
-    private int numberOfChecks;
 
-    Check(long receivingAccountNumber, long sendingAccountNumber, double checkAmount, int numberOfChecks)
+    Check(double checkAmount)
     {
-        this.receivingAccountNumber = receivingAccountNumber;
-        this.sendingAccountNumber = sendingAccountNumber;
         this.checkAmount = checkAmount;
-        this.numberOfChecks = numberOfChecks;
-    }
-    
-    public long getReceivingAccountNumber() {
-        return receivingAccountNumber;
-    }
-
-
-    public long getSendingAccountNumber() {
-        return sendingAccountNumber;
     }
 
     public double getCheckAmount() {
         return checkAmount;
     }
 
-    public int getNumberOfChecks() {
-        return numberOfChecks;
-    }
 }
