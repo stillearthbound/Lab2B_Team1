@@ -43,6 +43,11 @@ abstract public class Account {
      public void withdrawSavings(double withdrawAmount){
         this.SavingsBalance = this.SavingsBalance - withdrawAmount;
     }
+    public void depositCheck(double checkAmount){
+        Check check = new Check (checkAmount);
+        double deposit = check.getCheckAmount();
+        this.CheckingBalance = this.CheckingBalance + deposit;
+    }
      
 public String getAccountNumber()
 {
