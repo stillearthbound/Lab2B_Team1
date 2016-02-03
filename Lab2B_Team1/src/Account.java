@@ -13,7 +13,9 @@ abstract public class Account {
      public double SavingsBalance; 
      public double CheckingBalance;
      public long CreditCardNumber;
-     public int pin; 
+     public int pin;
+     public long BusinessAccountNum;
+     public double BusinessAccountBalance;
      
      Account (long AccountNumber, double SavingsBalance, double CheckingBalance, long CreditCardNumber, int pin){
         this.AccountNumber=AccountNumber;
@@ -21,6 +23,12 @@ abstract public class Account {
         this.CheckingBalance = CheckingBalance;
         this.CreditCardNumber = CreditCardNumber;
         this.pin= pin;
+     }
+     Account (long AccountNumber, double AccountBalance, long CreditCard, int Pin){
+         this.AccountNumber = AccountNumber;
+         this.BusinessAccountBalance = AccountBalance;
+         this.CreditCardNumber = CreditCard;
+         this.pin = Pin;
      }
 public String getAccountNumber()
 {
@@ -33,5 +41,8 @@ public String getSavingsBalance()
 public String getCheckingBalance()
 {
         return "Checking Balance =" + this.CheckingBalance;                         
+}
+public String getBusinessAccountBalance(){
+    return "Account Balance = " + this.BusinessAccountBalance;
 }
 }
