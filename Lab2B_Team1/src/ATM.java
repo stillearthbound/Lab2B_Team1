@@ -9,17 +9,22 @@
  * @author capta
  */
 public class ATM {
-   
-   boolean CheckPin(int PinNumber, long CCNumber, int AccountPin, long AccountCC){
-    if (PinNumber == AccountPin && CCNumber == AccountCC){
-        return true;
-    }
-    else{
-        return false;
-    }
+   private int AccountPin;
+   private long AccountCC;
+   ATM(int PinNumber, long CCNumber, int AccountPin, long AccountCC){
+    this.AccountCC = AccountCC;
+    this.AccountPin = AccountPin;
+     
     
 }
-
+ boolean CheckPin(int PinNumber, long CCNumber, int AccountPin, long AccountCC){
+     if (PinNumber == AccountPin && CCNumber == AccountCC){
+         return true;
+     }
+     else{
+         return false;
+     }
+ }
     
    public double convertEuroToDollars(double Amount){
     Amount = Currency.convertEuroToDollar(Amount);
