@@ -23,10 +23,13 @@ public class app {
         Scanner userInput = new Scanner(System.in);
         String input = "";
         int input1 =0; 
-       
+        System.out.println("Enter Credit Card Number(23454325 for this)");
+        long CCNumber= userInput.nextLong();
+        System.out.println("Enter PIN(1234)");
+       int pinNumber= userInput.nextInt();
+       ATM CheckPin1 = new ATM (pinNumber, CCNumber, 1234, 23454325);
+        while (CheckPin1.CheckPin(pinNumber, CCNumber, 1234, 23454325) == true){
         
-        System.out.println("Hello, would you like to make a deposit or withdraw or you can view your balance.  Press W for Withdraw or D for Deposit and B to check Balance."+
-                "To deposit or withdraw in Savings, please use 1 for Deposit, and 2 for Withdraw");
         
         input = userInput.nextLine();
         if (input.equalsIgnoreCase("W"))
@@ -36,6 +39,7 @@ public class app {
           
             a1.withdrawCheckings(input1);
             System.out.println(a1.getCheckingBalance());
+            break;
         }
         if (input.equalsIgnoreCase("D"))
         {
@@ -44,11 +48,13 @@ public class app {
           
             a1.depositCheckings(input1);
              System.out.println(a1.getCheckingBalance());
+             break;
         }
          if (input.equalsIgnoreCase("B"))
         {
             System.out.println(a1.getCheckingBalance());
             System.out.println(a1.getSavingsBalance());
+            break;
         }
       
         if (input.equalsIgnoreCase("1"))
@@ -58,6 +64,7 @@ public class app {
           
             a1.depositSavings(input1);
             System.out.println(a1.getSavingsBalance());
+            break;
         }
         if (input.equalsIgnoreCase("2"))
         {
@@ -66,9 +73,14 @@ public class app {
           
             a1.withdrawSavings(input1);
             System.out.println(a1.getSavingsBalance());
+            break;
         }
+        System.out.println("Hello, would you like to make a deposit or withdraw or you can view your balance.  Press W for Withdraw or D for Deposit and B to check Balance."+
+                "To deposit or withdraw in Savings, please use 1 for Deposit, and 2 for Withdraw");
         
-        
+    }
+      if(CheckPin1.CheckPin(pinNumber, CCNumber, 1234, 23454325) == false)
+            System.out.println("Wrong Pin, CCnumber");
         
     }
     
